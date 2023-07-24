@@ -17,13 +17,10 @@ atualizações e servirá para fazer alguns testes e manter o conhecimento em di
 integrá-lo com o frontend, transformando-o em um aplicativo fullstack.
 
 
-
-
-
-# Tecnologias utilizadas para a construção do projeto
-## Back end
-- Java 17
-- Spring Boot 3.1.3
+## Tecnologias utilizadas para a construção do projeto
+### Back end
+- Java
+- Spring Boot
 - JPA / Hibernate
 - Maven
 - JWT, Oauth2 authentication
@@ -32,36 +29,36 @@ integrá-lo com o frontend, transformando-o em um aplicativo fullstack.
 - Database: PostgreSQL e para testes H2 Database.
 
 
-# Como executar o projeto:
+## Como executar o projeto:
 
+- Pré-requisitos: Java versão 17 ou superior
+- Clone o repositório
 ```bash
-# clone repository 
 git clone https://github.com/GilbertoSEspinoso/dscommerce.git
-
-# Em sua IDE de preferência(eu utilizei Intellij), importe a pasta dscommerce e faça o update das dependências do maven.
-
-# Ao executar o projeto, o mesmo pode ser acessado no navegador em http://localhost:8080/
-
 ```
+- Use sua IDE de preferência (eu utilizei Intellij)
+- Faça o update das dependências do maven.
+
+<br>
+<br>
+
+>Para configurar a variáveis de ambiente e adicionar as collections no Postman, faça o download dos arquivos: 
+> 
+> 
+>https://drive.google.com/drive/folders/1udDNOcb0iM5Shslt_AeguTQGhH_xVIkW?usp=drive_link
 
 
-- É preciso adicionar as collections do postman para fazer as requisições: 
-    - GET
-    - POST
-    - PUT
-    - DELETE
 
-
-- Obs: Será necessário configurar a variáveis de ambiente no Postman.
-
-
-- Aqui está o Link para o download das variáveis de ambiente e das collections do Postman: https://drive.google.com/drive/folders/1udDNOcb0iM5Shslt_AeguTQGhH_xVIkW?usp=drive_link
 
 
   - Dados para login: 
     - maria@gmail.com ('ROLE_CLIENT') 
     - alex@gmai.com ('ROLE_CLIENT' e 'ROLE_ADMIN')
+    - ![colletion2](https://github.com/GilbertoSEspinoso/assets/blob/main/dsCommerce/name-user-vav.jpg?raw=true)
 
+
+
+<br>
 
 <h1>Modelo conceitual</h1>
 
@@ -73,7 +70,6 @@ git clone https://github.com/GilbertoSEspinoso/dscommerce.git
 
 - Um usuário pode ter um ou mais "roles", que são os perfis de acesso deste usuário
   no sistema (client, admin)
-<br>
 <br>
 <br>
   
