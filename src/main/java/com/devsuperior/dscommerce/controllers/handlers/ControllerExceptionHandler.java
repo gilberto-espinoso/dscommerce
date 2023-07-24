@@ -35,8 +35,6 @@ public class ControllerExceptionHandler {
     public ResponseEntity<CustomError> methodArgumentNotValidation(MethodArgumentNotValidException e, HttpServletRequest request) {
         HttpStatus status = HttpStatus.UNPROCESSABLE_ENTITY;
         ValidationError err = new ValidationError(Instant.now(), status.value(), "Dados Inválidos!", request.getRequestURI());
-
-        ;
         for (FieldError f : e.getBindingResult().getFieldErrors()) {
             err.addError(f.getField(), f.getDefaultMessage());
         }
