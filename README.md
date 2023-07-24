@@ -1,4 +1,4 @@
-<h1 align="center">DSCommerce</h1>
+<h1 align="center">DScommerce</h1>
 
 <p align='center'> 
     <img src="https://img.shields.io/badge/Spring_Boot  V3.1.3-F2F4F9?style=for-the-badge&logo=spring-boot"/>
@@ -16,6 +16,15 @@ assim por diante. Esse projeto é um exemplo de habilidades que venho praticando
 atualizações e servirá para fazer alguns testes e manter o conhecimento em dia. Mesmo sendo um projeto backend, em breve vou 
 integrá-lo com o frontend, transformando-o em um aplicativo fullstack.
 
+## Modelo conceitual
+
+<div style="text-align: center;">
+  <img src="https://github.com/GilbertoSEspinoso/assets/blob/main/dsCommerce/modelo-conceitual.png?raw=true" alt="Descrição da imagem" style="max-width: 80%; height: auto;">
+</div>
+
+>Cada item de pedido (OrderItem) corresponde a um produto no pedido, com uma   quantidade. Sendo que o preço também é armazenado no item de pedido por  questões de histórico (se o preço do produto mudar no futuro, o preço do item de pedido continua registrado com o preço real que foi vendido na época).
+>
+>Um usuário pode ter um ou mais "roles", que são os perfis de acesso deste usuário no sistema (client, admin)
 
 ## Tecnologias utilizadas para a construção do projeto
 ### Back end
@@ -28,7 +37,6 @@ integrá-lo com o frontend, transformando-o em um aplicativo fullstack.
 - Spring Security
 - Database: PostgreSQL e para testes H2 Database.
 
-
 ## Como executar o projeto:
 
 - Pré-requisitos: Java versão 17 ou superior
@@ -40,7 +48,6 @@ git clone https://github.com/GilbertoSEspinoso/dscommerce.git
 - Faça o update das dependências do maven.
 
 <br>
-<br>
 
 >Para configurar a variáveis de ambiente e adicionar as collections no Postman, faça o download dos arquivos: 
 > 
@@ -49,32 +56,18 @@ git clone https://github.com/GilbertoSEspinoso/dscommerce.git
 
 
 
-
-
-  - Dados para login: 
-    - maria@gmail.com ('ROLE_CLIENT') 
-    - alex@gmai.com ('ROLE_CLIENT' e 'ROLE_ADMIN')
-    - ![colletion2](https://github.com/GilbertoSEspinoso/assets/blob/main/dsCommerce/name-user-vav.jpg?raw=true)
-
-
-
+- Dados para login: 
+  - maria@gmail.com ('ROLE_CLIENT') 
+  - alex@gmai.com ('ROLE_CLIENT' e 'ROLE_ADMIN')
+    
+    
+<p align="center">
+  <img src="https://github.com/GilbertoSEspinoso/assets/blob/main/dsCommerce/name-user-vav.jpg?raw=true" alt="Descrição da imagem">
+</p>
 <br>
 
-<h1>Modelo conceitual</h1>
-
-- Cada item de pedido (OrderItem) corresponde a um produto no pedido, com uma
-  quantidade. Sendo que o preço também é armazenado no item de pedido por
-  questões de histórico (se o preço do produto mudar no futuro, o preço do item de
-  pedido continua registrado com o preço real que foi vendido na época).
 
 
-- Um usuário pode ter um ou mais "roles", que são os perfis de acesso deste usuário
-  no sistema (client, admin)
-<br>
-<br>
-  
-![UML](https://github.com/GilbertoSEspinoso/assets/blob/main/dsCommerce/modelo-conceitual.png?raw=true)
-<br>
 <br>
 
 | Caso de uso | Visão geral                                                                                    | Acesso |
@@ -91,13 +84,17 @@ git clone https://github.com/GilbertoSEspinoso/dscommerce.git
 | Visualizar pedidos | Visualizar os pedidos que o próprio usuário já fez                                             | Usuário Logado |
 | Registrar pagamento | Salvar no sistema os dados do pagamento de um pedido                                           | Somente Admin |
 | Reportar pedidos | Relatório de pedidos, podendo ser filtrados por data                                           | Somente Admin |
+<br><br><br><br>
+
+<h2 align='center'> Autor </h2>
+<p align='center'>Gilberto Espinoso </p>
+<p align="center">
+  <a href="https://www.linkedin.com/in/gilbertoespns/">LinkedIn</a>
+</p>
 
 
 
 
 
-## Autor
 
-<h4> Gilberto S Espinoso / DEVSUPERIOR </h4>
 
-LinkedIn https://www.linkedin.com/in/gilbertoespns/
