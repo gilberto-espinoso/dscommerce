@@ -16,6 +16,8 @@ assim por diante. Esse projeto é um exemplo de habilidades que venho praticando
 atualizações e servirá para fazer alguns testes e manter o conhecimento em dia. Mesmo sendo um projeto backend, em breve vou 
 integrá-lo com o frontend, transformando-o em um aplicativo fullstack.
 
+URL da API: https://dscommerce-deploy-3e590a2ab360.herokuapp.com/
+
 ## Modelo conceitual
 
 <div style="text-align: center;">
@@ -80,6 +82,25 @@ git clone https://github.com/GilbertoSEspinoso/dscommerce.git
 - Deploy with CI/CD
 - Spring Security
 - Database: PostgreSQL e para testes H2 Database.
+- Implantação: Heroku
+
+## O que desenvolvi com esse projeto:
+- Componentes e Injeção de Dependência
+- Estruturação de projeto, camadas
+- Modelo de Domínio
+- Relacionamentos
+- Mapeamento objeto relacional
+- API Rest
+- Tratamento de exceções
+- Validação de dados
+- Consultas ao banco de dados
+- Transações
+- Login e controle de acesso
+- OAuth2, JWT
+- Variáveis de ambiente
+- Perfis de projeto
+- Ambiente local, homologação
+- Implantação, CI/CD
 
 <br>
 <h2 align='center'> Autor </h2>
