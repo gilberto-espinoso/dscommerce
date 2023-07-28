@@ -26,16 +26,23 @@ integrá-lo com o frontend, transformando-o em um aplicativo fullstack.
 >
 >Um usuário pode ter um ou mais "roles", que são os perfis de acesso deste usuário no sistema (client, admin)
 
-## Tecnologias utilizadas para a construção do projeto
-### Back end
-- Java
-- Spring Boot
-- JPA / Hibernate
-- Maven
-- JWT, Oauth2 authentication
-- Deploy with CI/CD
-- Spring Security
-- Database: PostgreSQL e para testes H2 Database.
+
+
+| Caso de uso | Visão geral                                                                                    | Acesso |
+|----------|------------------------------------------------------------------------------------------------|----------------|
+| Manter produtos | CRUD de produtos, podendo filtrar itens pelo nome                                              | Somente Admin |
+| Manter categorias  | CRUD de categorias, podendo filtrar itens pelo nome                                            | Somente Admin |
+| Manter usuários  | CRUD de usuários, podendo filtrar itens pelo nome                                              | Somente Admin |
+| Gerenciar carrinho  | Incluir e remover itens do carrinho de compras, alterar as quantidades do produto em cada item | Público |
+| Consultar catálogo  | Listar produtos disponíveis, podendo filtrar produtos pelo nome                                | Público |
+| Sign up  | Cadastrar-se no sistema                                                                        | Público |
+| Login  | Efetuar login no sistema                                                                       | Público |
+| Registrar pedido  | Salvar no sistema um pedido a partir dos dados do carrinho de compras informado                | Usuário Logado |
+| Atualizar perfil  | Atualizar o próprio cadastro                                                                   | Usuário Logado |
+| Visualizar pedidos | Visualizar os pedidos que o próprio usuário já fez                                             | Usuário Logado |
+| Registrar pagamento | Salvar no sistema os dados do pagamento de um pedido                                           | Somente Admin |
+| Reportar pedidos | Relatório de pedidos, podendo ser filtrados por data                                           | Somente Admin |
+<br>
 
 ## Como executar o projeto:
 
@@ -54,43 +61,33 @@ git clone https://github.com/GilbertoSEspinoso/dscommerce.git
 > 
 >https://drive.google.com/drive/folders/1udDNOcb0iM5Shslt_AeguTQGhH_xVIkW?usp=drive_link
 
-
-
 - Dados para login: 
   - maria@gmail.com ('ROLE_CLIENT') 
   - alex@gmai.com ('ROLE_CLIENT' e 'ROLE_ADMIN')
     
-    
-<p align="center">
+    <p align="center">
   <img src="https://github.com/GilbertoSEspinoso/assets/blob/main/dsCommerce/name-user-vav.jpg?raw=true" alt="Descrição da imagem">
 </p>
 <br>
 
-
+## Tecnologias utilizadas para a construção do projeto
+### Back end
+- Java
+- Spring Boot
+- JPA / Hibernate
+- Maven
+- JWT, Oauth2 authentication
+- Deploy with CI/CD
+- Spring Security
+- Database: PostgreSQL e para testes H2 Database.
 
 <br>
-
-| Caso de uso | Visão geral                                                                                    | Acesso |
-|----------|------------------------------------------------------------------------------------------------|----------------|
-| Manter produtos | CRUD de produtos, podendo filtrar itens pelo nome                                              | Somente Admin |
-| Manter categorias  | CRUD de categorias, podendo filtrar itens pelo nome                                            | Somente Admin |
-| Manter usuários  | CRUD de usuários, podendo filtrar itens pelo nome                                              | Somente Admin |
-| Gerenciar carrinho  | Incluir e remover itens do carrinho de compras, alterar as quantidades do produto em cada item | Público |
-| Consultar catálogo  | Listar produtos disponíveis, podendo filtrar produtos pelo nome                                | Público |
-| Sign up  | Cadastrar-se no sistema                                                                        | Público |
-| Login  | Efetuar login no sistema                                                                       | Público |
-| Registrar pedido  | Salvar no sistema um pedido a partir dos dados do carrinho de compras informado                | Usuário Logado |
-| Atualizar perfil  | Atualizar o próprio cadastro                                                                   | Usuário Logado |
-| Visualizar pedidos | Visualizar os pedidos que o próprio usuário já fez                                             | Usuário Logado |
-| Registrar pagamento | Salvar no sistema os dados do pagamento de um pedido                                           | Somente Admin |
-| Reportar pedidos | Relatório de pedidos, podendo ser filtrados por data                                           | Somente Admin |
-<br><br><br><br>
-
 <h2 align='center'> Autor </h2>
 <p align='center'>Gilberto Espinoso </p>
 <p align="center">
   <a href="https://www.linkedin.com/in/gilbertoespns/">LinkedIn</a>
 </p>
+
 
 
 
