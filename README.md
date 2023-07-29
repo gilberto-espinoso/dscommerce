@@ -3,11 +3,20 @@
 <p align='center'> 
     <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white"/>  
     <img src="https://img.shields.io/badge/Spring_Boot-F2F4F9?style=for-the-badge&logo=spring-boot"/>
-    <img src="https://img.shields.io/badge/JWT-F2F4F9?style=for-the-badge&logo=JSON%20web%20tokens&logoColor=black"/>
-    <img src="https://img.shields.io/badge/IntelliJ_IDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white"/>
+<img src="https://img.shields.io/badge/spring-security-F2F4F9?style=for-the-badge&logo=spring-security"/>
+   <img src="https://img.shields.io/badge/maven-F2F4F9?style=for-the-badge&logo=maven"/> 
+<img src="https://img.shields.io/badge/JWT-F2F4F9?style=for-the-badge&logo=JSON%20web%20tokens&logoColor=black"/>
+
+
+<img src="https://img.shields.io/badge/postgresql-F6F4F9?style=for-the-badge&logo=postgresql"/>
+<img src="https://img.shields.io/badge/heroku-F?style=for-the-badge&logo=heroku"/>
 </p>
 
+
 > Status do Projeto: ✔️ (Concluído)
+
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/GilbertoSEspinoso/dscommerce/blob/main/LICENSE)
+
 
 ### Tópicos
 
@@ -15,7 +24,7 @@
 
 :small_blue_diamond: [Funcionalidades](#funcionalidades)
 
-:small_blue_diamond: [Deploy da Aplicação](#layout-e-deploy-da-aplicação)
+:small_blue_diamond: [Modelo conceitual](#modelo-conceitual)
 
 :small_blue_diamond: [Caso de uso](#casos-de-uso)
 
@@ -30,10 +39,8 @@
 ## Descrição do projeto
 
 DSCommerce é uma aplicação back-end construída ao longo do curso `Java Spring Ultimate` da
-escola de programação [DEVSUPERIOR.](https://devsuperior.com.br/cursos) 
-
-Este projeto é baseado em um comércio eletrônico que você navega atráves de um lista 
-ordenada de produtos podendo adiciona-lo ao carrinho de compras, caso o usuário esteja 
+escola de programação [DEVSUPERIOR.](https://devsuperior.com.br/cursos) Este projeto é baseado em um comércio eletrônico que você navega atráves de um lista 
+ordenada de produtos podendo adiciona-los em um pedido, caso o usuário esteja 
 logado no sistema o seu pedido pode ser finalizado, caso contrário o usúario não realizará a 
 operação. 
 
@@ -57,11 +64,11 @@ Essa aplicação disponibiliza três tipos de acessos: `'ROLE_ADMIN'`, `'ROLE_CL
 
 ✔️ Salvar no sistema um pedido com a quantidade de produdos informado.
 
-## Layout e Deploy da Aplicação
-
 >Link do deploy da API: https://dscommerce-deploy-3e590a2ab360.herokuapp.com/
 
-### Modelo conceitual
+<br>
+
+## Modelo conceitual
 
 <div style="text-align: center;">
   <img src="https://github.com/GilbertoSEspinoso/assets/blob/main/dsCommerce/modelo-conceitual.png?raw=true" alt="Descrição da imagem" style="max-width: 80%; height: auto;">
@@ -70,6 +77,8 @@ Essa aplicação disponibiliza três tipos de acessos: `'ROLE_ADMIN'`, `'ROLE_CL
 >Cada item de pedido (OrderItem) corresponde a um produto no pedido, com uma   quantidade. Sendo que o preço também é armazenado no item de pedido por  questões de histórico (se o preço do produto mudar no futuro, o preço do item de pedido continua registrado com o preço real que foi vendido na época).
 >
 >Um usuário pode ter um ou mais "roles", que são os perfis de acesso deste usuário no sistema (client, admin)
+
+<br>
 
 ## Casos de Uso
 
@@ -105,11 +114,15 @@ Essa aplicação disponibiliza três tipos de acessos: `'ROLE_ADMIN'`, `'ROLE_CL
 1. [IN] O cliente informa os dados do carrinho de compras [1].
 2. [OUT] O sistema informa os dados do carrinho de compras[1] e o id do pedido.
 
+<br>
+
 ## Pré-requisitos
 
 ⚠️ [Java](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
 
 ⚠️ [Postman](https://www.postman.com/)
+
+<br>
 
 ## Como rodar a aplicação 
 
@@ -130,6 +143,8 @@ Baixar as váriaveis de ambiente e importar-las no Postman
 ```
 Rodar o programa configurado no ambiente de `test`
 ```
+<br>
+
 >Para configurar a variáveis de ambiente e adicionar as collections no Postman, faça o download dos arquivos:
 >
 >
@@ -143,6 +158,8 @@ Rodar o programa configurado no ambiente de `test`
   <img src="https://github.com/GilbertoSEspinoso/assets/blob/main/dsCommerce/name-user-vav.jpg?raw=true" alt="Descrição da imagem">
 </p>
 
+<br>
+
 ## Tecnologias utilizadas
 - Java
 - Spring Boot
@@ -153,6 +170,8 @@ Rodar o programa configurado no ambiente de `test`
 - Spring Security
 - Database: PostgreSQL e para testes H2 Database.
 - Implantação: Heroku
+
+<br>
 
 ## O que desenvolvi com esse projeto:
 - Componentes e Injeção de Dependência
