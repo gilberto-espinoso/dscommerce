@@ -1,24 +1,67 @@
 <h1 align="center">DScommerce</h1>
 
 <p align='center'> 
-    <img src="https://img.shields.io/badge/Spring_Boot  V3.1.3-F2F4F9?style=for-the-badge&logo=spring-boot"/>
     <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white"/>  
+    <img src="https://img.shields.io/badge/Spring_Boot-F2F4F9?style=for-the-badge&logo=spring-boot"/>
     <img src="https://img.shields.io/badge/JWT-F2F4F9?style=for-the-badge&logo=JSON%20web%20tokens&logoColor=black"/>
     <img src="https://img.shields.io/badge/IntelliJ_IDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white"/>
 </p>
 
-# Sobre o projeto
+> Status do Projeto: ✔️ (Concluído)
 
-DSCommerce é um aplicativo de comércio eletrônico realizado como projeto final do bootcamp Java Spring Ultimate da escola de programação DEVSUPERIOR.
+### Tópicos
 
-Nesse projeto teremos partes que apenas administradores poderão acessar, validar e 
-assim por diante. Esse projeto é um exemplo de habilidades que venho praticando diariamente e assim que possível, receberá novas 
-atualizações e servirá para fazer alguns testes e manter o conhecimento em dia. Mesmo sendo um projeto backend, em breve vou 
-integrá-lo com o frontend, transformando-o em um aplicativo fullstack.
+:small_blue_diamond: [Descrição do projeto](#descrição-do-projeto)
 
-URL da API: https://dscommerce-deploy-3e590a2ab360.herokuapp.com/
+:small_blue_diamond: [Funcionalidades](#funcionalidades)
 
-## Modelo conceitual
+:small_blue_diamond: [Deploy da Aplicação](#layout-e-deploy-da-aplicação)
+
+:small_blue_diamond: [Caso de uso](#casos-de-uso)
+
+:small_blue_diamond: [Pré-requisitos](#pré-requisitos)
+
+:small_blue_diamond: [Como rodar a aplicação](#como-rodar-a-aplicação)
+
+:small_blue_diamond: [Tecnologias utilizadas](#tecnologias-utilizadas)
+
+:small_blue_diamond: [Aprendizado](#o-que-desenvolvi-com-esse-projeto)
+
+## Descrição do projeto
+
+DSCommerce é uma aplicação back-end construída ao longo do curso `Java Spring Ultimate` da
+escola de programação [DEVSUPERIOR.](https://devsuperior.com.br/cursos) 
+
+Este projeto é baseado em um comércio eletrônico que você navega atráves de um lista 
+ordenada de produtos podendo adiciona-lo ao carrinho de compras, caso o usuário esteja 
+logado no sistema o seu pedido pode ser finalizado, caso contrário o usúario não realizará a 
+operação. 
+
+Essa aplicação disponibiliza três tipos de acessos: `'ROLE_ADMIN'`, `'ROLE_CLIENT'` e `público`. <br>
+- `Público` pode listar todos os produtos ou realizar pesquisa pelo nome.
+- `'ROLE_CLIENT'` pode incluir e remover produtos do carrinho de compra, bem como alterar as quantidades de cada item e finalizar um pedido.
+- `'ROLE_ADMIN'` possui todas essas características, além de: 
+  - realizar cadastro de novos produtos
+  - atualizar produtos e excluir produtos.
+  - visualizar pedidos pelo `id`.
+
+## Funcionalidades
+
+✔️ No CRUD de cada entidade(categorias, produtos e usuários) filtra itens pelo nome.
+
+✔️ Incluir e remover itens do pedido,  alterar as quantidades do produto em cada pedido.
+
+✔️ Listar produtos disponíveis, podendo filtrar produtos pelo nome
+
+✔️ Efetuar login no sistema e validação de acesso.
+
+✔️ Salvar no sistema um pedido com a quantidade de produdos informado.
+
+## Layout e Deploy da Aplicação
+
+>Link do deploy da API: https://dscommerce-deploy-3e590a2ab360.herokuapp.com/
+
+### Modelo conceitual
 
 <div style="text-align: center;">
   <img src="https://github.com/GilbertoSEspinoso/assets/blob/main/dsCommerce/modelo-conceitual.png?raw=true" alt="Descrição da imagem" style="max-width: 80%; height: auto;">
@@ -28,52 +71,79 @@ URL da API: https://dscommerce-deploy-3e590a2ab360.herokuapp.com/
 >
 >Um usuário pode ter um ou mais "roles", que são os perfis de acesso deste usuário no sistema (client, admin)
 
+## Casos de Uso
 
+### Consultar catálogo (Cenário principal de sucesso)
+1. [OUT] O sistema informa uma listagem paginada de nome, imagem e preço dos
+   produtos, ordenada por nome.
+2. [IN] O usuário informa, opcionalmente, parte do nome de um produto
+3. [OUT] O sistema informa a listagem atualizada
 
-| Caso de uso | Visão geral                                                                                    | Acesso |
-|----------|------------------------------------------------------------------------------------------------|----------------|
-| Manter produtos | CRUD de produtos, podendo filtrar itens pelo nome                                              | Somente Admin |
-| Manter categorias  | CRUD de categorias, podendo filtrar itens pelo nome                                            | Somente Admin |
-| Manter usuários  | CRUD de usuários, podendo filtrar itens pelo nome                                              | Somente Admin |
-| Gerenciar carrinho  | Incluir e remover itens do carrinho de compras, alterar as quantidades do produto em cada item | Público |
-| Consultar catálogo  | Listar produtos disponíveis, podendo filtrar produtos pelo nome                                | Público |
-| Sign up  | Cadastrar-se no sistema                                                                        | Público |
-| Login  | Efetuar login no sistema                                                                       | Público |
-| Registrar pedido  | Salvar no sistema um pedido a partir dos dados do carrinho de compras informado                | Usuário Logado |
-| Atualizar perfil  | Atualizar o próprio cadastro                                                                   | Usuário Logado |
-| Visualizar pedidos | Visualizar os pedidos que o próprio usuário já fez                                             | Usuário Logado |
-| Registrar pagamento | Salvar no sistema os dados do pagamento de um pedido                                           | Somente Admin |
-| Reportar pedidos | Relatório de pedidos, podendo ser filtrados por data                                           | Somente Admin |
-<br>
+### Manter produtos (Cenário principal de sucesso)
+1. Executar caso de uso: Consultar catálogo.
+2. O admin seleciona uma das opções
+   2.1. Variante Inserir
+   2.2. Variante Atualizar
+   2.3. Variante Deletar
 
-## Como executar o projeto:
+### Login (Cenário principal de sucesso)
+1. [IN] O usuário anônimo informa suas credenciais (nome e senha).
+2. [OUT] O sistema informa um token válido.
 
-- Pré-requisitos: Java versão 17 ou superior
-- Clone o repositório
+### Gerenciar carrinho (Cenário principal de sucesso)
+1. Executar caso de uso: Consultar catálogo.
+2. [IN] O Usuário anônimo seleciona um produto.
+3. [OUT] O sistema informa nome, preço, descrição, imagem, e nomes das categorias
+   do produto selecionado.
+4. [IN] O Usuário anônimo informa que deseja adicionar o produto ao carrinho.
+5. [OUT] O sistema informa os dados do carrinho de compras [1].
+6. [IN] O Usuário anônimo informa, opcionalmente, que deseja incrementar ou
+   decrementar a quantidade de um item no carrinho de compras.
+7. [ OUT] O sistema informa os dados atualizados do carrinho de compras [1].
+
+### Registrar pedido (Cenário principal de sucesso)
+1. [IN] O cliente informa os dados do carrinho de compras [1].
+2. [OUT] O sistema informa os dados do carrinho de compras[1] e o id do pedido.
+
+## Pré-requisitos
+
+⚠️ [Java](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
+
+⚠️ [Postman](https://www.postman.com/)
+
+## Como rodar a aplicação 
+
+No terminal, clone o projeto:
+
 ```bash
-git clone https://github.com/GilbertoSEspinoso/dscommerce.git
+git clone https://github.com/GilbertoSEspinoso/dscommerce
 ```
-- Use sua IDE de preferência (eu utilizei Intellij)
-- Faça o update das dependências do maven.
-
-<br>
-
->Para configurar a variáveis de ambiente e adicionar as collections no Postman, faça o download dos arquivos: 
-> 
-> 
+```
+Use sua IDE de preferência (eu utilizei Intellij)
+```
+```
+Faça o update das dependências do maven.
+```
+```
+Baixar as váriaveis de ambiente e importar-las no Postman
+```
+```
+Rodar o programa configurado no ambiente de `test`
+```
+>Para configurar a variáveis de ambiente e adicionar as collections no Postman, faça o download dos arquivos:
+>
+>
 >https://drive.google.com/drive/folders/1udDNOcb0iM5Shslt_AeguTQGhH_xVIkW?usp=drive_link
 
-- Dados para login: 
-  - maria@gmail.com ('ROLE_CLIENT') 
+- Dados para login:
+  - maria@gmail.com ('ROLE_CLIENT')
   - alex@gmai.com ('ROLE_CLIENT' e 'ROLE_ADMIN')
-    
+
     <p align="center">
   <img src="https://github.com/GilbertoSEspinoso/assets/blob/main/dsCommerce/name-user-vav.jpg?raw=true" alt="Descrição da imagem">
 </p>
-<br>
 
-## Tecnologias utilizadas para a construção do projeto
-### Back end
+## Tecnologias utilizadas
 - Java
 - Spring Boot
 - JPA / Hibernate
@@ -103,11 +173,12 @@ git clone https://github.com/GilbertoSEspinoso/dscommerce.git
 - Implantação, CI/CD
 
 <br>
+
+[Voltar para o top](#tópicos) 🔝
+
 <h2 align='center'> Autor </h2>
-<p align='center'>Gilberto Espinoso </p>
-<p align="center">
-  <a href="https://www.linkedin.com/in/gilbertoespns/">LinkedIn</a>
-</p>
+<p align='center'>Gilberto da Silva Espinoso <a href="https://www.linkedin.com/in/gilbertoespns/">LinkedIn</a> </p>
+
 
 
 
