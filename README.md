@@ -8,8 +8,7 @@
 
 Este projeto é uma API construída usando Java, Java Spring, PostgresSQL como banco de dados e Spring Security para controle de autenticação.
 
-A API simula a funcionalidade de um e-commerce de venda de produtos eletrônicos . Os usuários podem se registrar no aplicativo e os usuários logados podem navegar atráves de um lista ordenada de produtos, podendo adiciona-los em um pedido, usuário logado no sistema pode finalizar o pedido, caso contrário o usúario não terá permissão, enquanto os usuários ADMIN podem registrar novos produtos e conferir todos os pedidos na API.
-
+Essa API simula a funcionalidade de um e-commerce de vendas de produtos eletrônicos. Os usuários podem se registrar no aplicativo e o usuário logado pode navegar através de uma lista ordenada de produtos, podendo adicioná-lo em um pedido, o usuário logado no sistema pode finalizar o pedido, caso contrário o usuário não terá permissão, enquanto o usuário ADMIN pode registrar novos produtos e conferir todos os pedidos na API.
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/GilbertoSEspinoso/dscommerce/blob/main/LICENSE)
 
 
