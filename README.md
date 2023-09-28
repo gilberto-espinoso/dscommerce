@@ -53,7 +53,8 @@ git clone https://github.com/GilbertoSEspinoso/dscommerce.git
 
 4. Inicie o aplicativo com o Maven
 
-> A API está acessível em: https://dscommerce-deploy-3e590a2ab360.herokuapp.com/
+> A API está acessível em: https://dscommerce.live
+> Documentação com Swagger: https://dscommerce.live/swagger-ui/index.html
 
 
 
