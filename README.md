@@ -53,12 +53,6 @@ git clone https://github.com/GilbertoSEspinoso/dscommerce.git
 
 4. Inicie o aplicativo com o Maven
 
-> A API está acessível em: https://dscommerce.live
-
-> Documentação com Swagger: https://dscommerce.live/swagger-ui/index.html
-
-
-
 ## Autenticação
 A API usa Spring Security para controle de autenticação. As seguintes funções estão disponíveis:
 
